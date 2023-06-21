@@ -89,7 +89,7 @@ func hitPost(c echo.Context) error {
 	}
 	client := &http.Client{}
 	r, _ := http.NewRequest(http.MethodPost, "https://graph.facebook.com/v15.0/105396722334906/messages", bytes.NewBuffer(jsonStr))
-	r.Header.Add("Authorization", "Bearer EAAIglDnk6OoBADazOW3spDSR5zfm2RTC3THYUdcBSLPb4Gd7ijpePEPd1PqSNFmE4Las5kSTx70bW3bAZAZBs402owNkS4huV0M9OBA2yZCdVDiXyqrpp46W534s2bwm749PPYPEQ4N2ZAGPH48B07ItzSElu721RpWeLBaAfUAbLQrDuFpjUkxSk4nkZBQsVmrV3mHhyosYdQlghxZCSI")
+	r.Header.Add("Authorization", "Bearer <Access_Token>")
 	r.Header.Add("Content-Type", "application/json")
 	resp, err := client.Do(r)
 	body, _ := io.ReadAll(resp.Body)
@@ -154,7 +154,7 @@ func icmPayload(r echo.Context) error {
 			fmt.Println("string object", string(jsonStr1))
 		}
 		rq, _ := http.NewRequest(http.MethodPost, "https://graph.facebook.com/v15.0/105396722334906/messages", bytes.NewBuffer(jsonStr1))
-		rq.Header.Add("Authorization", "Bearer EAAIglDnk6OoBADazOW3spDSR5zfm2RTC3THYUdcBSLPb4Gd7ijpePEPd1PqSNFmE4Las5kSTx70bW3bAZAZBs402owNkS4huV0M9OBA2yZCdVDiXyqrpp46W534s2bwm749PPYPEQ4N2ZAGPH48B07ItzSElu721RpWeLBaAfUAbLQrDuFpjUkxSk4nkZBQsVmrV3mHhyosYdQlghxZCSI")
+		rq.Header.Add("Authorization", "Bearer  <Access_Token>")
 		rq.Header.Add("Content-Type", "application/json")
 		resp, err := client.Do(rq)
 		body, _ := io.ReadAll(resp.Body)
@@ -197,7 +197,7 @@ func icmPayload(r echo.Context) error {
 			fmt.Println("string object", string(jsonStr1))
 		}
 		rq, _ := http.NewRequest(http.MethodPost, "https://graph.facebook.com/v15.0/105396722334906/messages", bytes.NewBuffer(jsonStr1))
-		rq.Header.Add("Authorization", "Bearer EAAIglDnk6OoBADazOW3spDSR5zfm2RTC3THYUdcBSLPb4Gd7ijpePEPd1PqSNFmE4Las5kSTx70bW3bAZAZBs402owNkS4huV0M9OBA2yZCdVDiXyqrpp46W534s2bwm749PPYPEQ4N2ZAGPH48B07ItzSElu721RpWeLBaAfUAbLQrDuFpjUkxSk4nkZBQsVmrV3mHhyosYdQlghxZCSI")
+		rq.Header.Add("Authorization", "Bearer  <Access_Token>")
 		rq.Header.Add("Content-Type", "application/json")
 		resp, err := client.Do(rq)
 		body, _ := io.ReadAll(resp.Body)
